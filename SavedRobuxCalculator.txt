@@ -1,0 +1,33 @@
+const elementsToRemove = document.querySelectorAll('.list-item.item-card.ng-scope');
+
+elementsToRemove.forEach(element => {
+    const span = element.querySelector('span.icon-checkmark-white-bold[title="You own this item"]');
+    if (!span) {
+        //element.remove();
+    }
+});
+
+const robuxElements = document.querySelectorAll('.text-robux-tile.ng-binding.ng-scope');
+
+let total = 0;
+let count = 0;
+
+robuxElements.forEach(element => {
+    const text = element.textContent;
+
+    const numbers = text.match(/\d+/g);
+
+    const itemName = element.closest('.item-card.ng-scope').querySelector('.item-card-name.ng-binding').textContent;
+
+    if (numbers) {
+        numbers.forEach(number => {
+            //console.log("Nome accessorio: " + itemName + ", Valore (robux): " + number);
+            total += parseInt(number, 10);
+            count++;
+        });
+    }
+});
+
+console.log("Totale dei valori trovati (numero accessori): " + total);
+
+console.log("Numero di valori trovati (conteggio robux): " + count);
