@@ -3,7 +3,7 @@ const elementsToRemove = document.querySelectorAll('.list-item.item-card.ng-scop
 elementsToRemove.forEach(element => {
     const span = element.querySelector('span.icon-checkmark-white-bold[title="You own this item"]');
     if (!span) {
-        //element.remove();
+        element.remove();
     }
 });
 
@@ -21,13 +21,12 @@ robuxElements.forEach(element => {
 
     if (numbers) {
         numbers.forEach(number => {
-            //console.log("Nome accessorio: " + itemName + ", Valore (robux): " + number);
+            //console.log("Name accessory: " + itemName + ", Value (robux): " + number);
             total += parseInt(number, 10);
             count++;
         });
     }
 });
 
-console.log("Totale dei valori trovati (numero accessori): " + total);
-
-console.log("Numero di valori trovati (conteggio robux): " + count);
+console.log("Amout of robux: " + total);
+console.log("Amount of Accessories: " + count);
