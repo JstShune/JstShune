@@ -21,5 +21,6 @@ You should now be able to see how many robux you "saved" and the amount of free 
 
 To also print the name of every head found, on line 24 remove the //
 To prevent the code from deleting all the elements that you don't own, comment with // the line 6
+To do the opposite (deleting all the owned ones), on line 5, remove the ! before span
 
 For any suggestion or help, hit me up on discord: ciabattine
