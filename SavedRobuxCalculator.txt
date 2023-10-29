@@ -1,7 +1,7 @@
 const elementsToRemove = document.querySelectorAll('.list-item.item-card.ng-scope');
 
 elementsToRemove.forEach(element => {
-    const span = element.querySelector('span.icon-checkmark-white-bold[title="You own this item"]');
+    const span = element.querySelector('span.icon-checkmark-white-bold');
     if (!span) {
         element.remove();
     }
